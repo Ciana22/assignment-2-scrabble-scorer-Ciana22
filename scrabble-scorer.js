@@ -60,7 +60,14 @@ function vowelBonusScore(word) {
   return score;
 }
 
-let scrabbleScore;
+function scrabbleScore(word) {
+  word = word.toLowerCase();
+  letterPoints = 0
+  for (let i = 0; i < word.length; i++) {
+    letterPoints += newPointStructure[word[i]]
+  }
+  return letterPoints
+}
 
 const scoringAlgorithms = [
   {
